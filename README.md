@@ -1,3 +1,3 @@
-# goit-markup-hw-02
+# goit-markup-hw-03
 
-Homework #2: Add page Portfolio. CSS (Fonts and colors)
+Homework #3: CSS (Flexbox, margins, borders)
