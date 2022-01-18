@@ -3,6 +3,9 @@
   --title-color: #212121;
   --accent-color: #2196f3;
 }
+* {
+  outline: 1px solid red;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -13,9 +16,29 @@ body {
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* ---------------- logo --------------- */
@@ -37,7 +60,40 @@ ul {
 }
 
 /* --------------- header --------------- */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header-menu {
+  margin-left: 93px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-menu .item + .item {
+  margin-left: 50px;
+}
+
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+.header-links .item + .item {
+  margin-left: 50px;
+}
+
 .menu-item {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -52,6 +108,7 @@ ul {
 }
 
 .header-link {
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -67,6 +124,19 @@ ul {
 /* --------------- footer --------------- */
 .footer {
   background-color: #2f303a;
+}
+
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links .item + .item {
+  margin-top: 9px;
 }
 
 .footer-link {
