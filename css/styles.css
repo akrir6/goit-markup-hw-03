@@ -1,21 +1,23 @@
 :root {
   --base-text-color: #757575;
   --title-color: #212121;
+  --btnhover-text-color: #ffffff;
   --accent-color: #2196f3;
-}
-* {
-  outline: 1px solid red;
+  --first-bgcolor: #ffffff;
+  --second-bgcolor: #f5f4fa;
+  --list-space: 30px;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
+  background-color: var(--first-bgcolor);
   color: var(--base-text-color);
 }
 
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -31,6 +33,7 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -122,6 +125,7 @@ img {
 }
 
 /* --------------- footer --------------- */
+
 .footer {
   background-color: #2f303a;
 }
@@ -133,6 +137,8 @@ img {
 
 .footer-links {
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-links .item + .item {
@@ -151,8 +157,15 @@ img {
   color: #ffffff;
 }
 
+/* ------------- sections styles -------------- */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* --------------- hero section --------------- */
-.hero-section {
+.hero {
   background-color: #2f303a;
 }
 
@@ -160,19 +173,35 @@ img {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 .order-button {
+  display: flex;
+  justify-content: center;
+
+  padding: 10px 32px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 200px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  color: #ffffff;
+
+  color: var(--btnhover-text-color);
   background-color: var(--accent-color);
+
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
   cursor: pointer;
 }
 
@@ -181,13 +210,25 @@ img {
   background-color: #188ce8;
 }
 
-/* --------------- sections --------------- */
+/* --------------- other sections --------------- */
+
 .section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
+
+  margin-bottom: 50px;
+}
+
+.list {
+  display: flex;
+}
+
+.list .item + .item {
+  margin-left: var(--list-space);
 }
 
 .feature-title {
@@ -200,33 +241,76 @@ img {
 }
 
 .feature-text {
+  margin-top: 10px;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--base-text-color);
 }
 
-.team-section {
-  background-color: #f5f4fa;
+.activitys {
+  padding-top: 0;
+}
+
+.team {
+  background-color: var(--second-bgcolor);
+}
+.team-members .item {
+  max-width: 270px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: var(--first-bgcolor);
 }
 
 .team-member {
-  background-color: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-member-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
 }
 
 .team-member-position {
+  margin-top: 10px;
+
   font-size: 16px;
   line-height: 1.19;
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--base-text-color);
+}
+
+/* --------------- Portfolio style ---------------- */
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(50px - var(--list-space));
+  margin-left: calc(-1 * var(--list-space));
+}
+
+.projects-list .item {
+  flex-basis: calc(100% / 3 - var(--list-space));
+
+  margin-top: var(--list-space);
+  margin-left: var(--list-space);
+}
+
+.project {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .project-title {
@@ -237,29 +321,45 @@ img {
 }
 
 .project-type {
+  margin-top: 4px;
+
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--base-text-color);
 }
 
+.projects-filter {
+  display: flex;
+  justify-content: center;
+}
+.projects-filter .item + .item {
+  margin-left: 8px;
+}
+
 .button-filter {
+  padding: 6px 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  background-color: #f5f4fa;
+  background-color: var(--second-bgcolor);
+
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .button-filter:hover,
 .button-filter:focus,
 .button-filter-checked {
-  color: #ffffff;
+  color: var(--btnhover-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* -------------- hidden class ------------- */
