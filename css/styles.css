@@ -230,6 +230,9 @@ img {
 .list .item + .item {
   margin-left: var(--list-space);
 }
+.feature .item {
+  flex-basis: 270px;
+}
 
 .feature-title {
   font-weight: 700;
